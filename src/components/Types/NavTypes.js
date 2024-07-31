@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import ButtonTypes from "./ButtonTypes";
-
+import TypesList from "./TypesList";
 const NavTypes = () => {
   const [typeList, setTypeList] = useState([]);
   useEffect(() => {
@@ -9,16 +8,15 @@ const NavTypes = () => {
       const response = await axios.get("https://pokeapi.co/api/v2/type/");
       response.data.results.forEach(async (id) => {
         const pokeType = await axios.get(
-          `https://pokeapi.co/api/v2/type/${id.name}/`
+          `https://pokeapi.co/api/v2/type/${id.name}`
         );
-
-        setTypeList(pokeType.data);
+        setTypeList((t) => [...t, pokeType.data]);
       });
     };
     getTypes();
   }, []);
-
-  return <ButtonTypes types={typeList} />;
+  console.log(typeList);
+  return <TypesList typeList={typeList} />;
 };
 
 export default NavTypes;
