@@ -1,10 +1,10 @@
 import React from "react";
-
+import "./types.css";
 function ButtonType(props) {
-  const { name } = props;
+  const { name, type } = props;
   return (
-    <div>
-      <h1 style={{ color: "white" }}>{name}</h1>
+    <div id="btn-content">
+      <button className={`btn-type ${type}`}>{name}</button>
     </div>
   );
 }
