@@ -1,13 +1,13 @@
 import "./App.css";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
-import Types from "./components/Types";
+import TypeBar from "./components/Types/TypeBar";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Types />
+      <TypeBar />
       <Home />
     </div>
   );
