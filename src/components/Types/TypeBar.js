@@ -1,33 +1,17 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React from "react";
+
 import "./types.css";
-import { TYPE_COLOR } from "./TypeColors";
-
-function TypeBar() {
-  const [types, setTypes] = useState([]);
-  useEffect(() => {
-    const fetchTypes = async () => {
-      const response = await axios.get("https://pokeapi.co/api/v2/type");
-      const filterType = response.data.results.filter(
-        (res) => res.name !== "unknown"
-      );
-      setTypes(filterType);
-      console.log(filterType);
-    };
-    fetchTypes();
-  }, []);
-
+import TypesList from "./TypesList";
+const TypeBar = (props) => {
+  const { types } = props;
+  console.log(types);
   return (
     <div className="navTypes">
-      <div>
-        {types.map((type, i) => (
-          <button key={i} className="btn-type">
-            {type.name}
-          </button>
-        ))}
-      </div>
+      {types.map((type, id) => (
+        <TypesList id={type.id} name={type.name} type={type.name} />
+      ))}
     </div>
   );
-}
+};
 
 export default TypeBar;
