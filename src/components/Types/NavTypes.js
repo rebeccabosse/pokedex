@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import TypesList from "./TypesList";
+import Home from "../Home";
+
 const NavTypes = () => {
   const [typeList, setTypeList] = useState([]);
   useEffect(() => {
@@ -15,8 +17,13 @@ const NavTypes = () => {
     };
     getTypes();
   }, []);
-  console.log(typeList);
-  return <TypesList typeList={typeList} />;
+
+  return (
+    <>
+      <TypesList typeList={typeList} />
+      <Home />
+    </>
+  );
 };
 
 export default NavTypes;
