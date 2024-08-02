@@ -13,8 +13,11 @@ const Home = () => {
         const pokeTypes = await axios.get(
           `https://pokeapi.co/api/v2/type/${type.name}`
         );
-
-        setTypeList((p) => [...p, pokeTypes.data]);
+        setTypeList((state) => {
+          state = [...state, pokeTypes.data];
+          state.sort((a, b) => (a.id > b.id ? 1 : -1));
+          return state;
+        });
       });
     };
     getTypes();
