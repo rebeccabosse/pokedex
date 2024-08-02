@@ -6,7 +6,9 @@ import "./types.css";
 const TypesList = (props) => {
   const { typeList } = props;
   const filterType = typeList.filter((type) => type.name !== "unknown");
-
+  const handleClick = () => {
+    console.log("dd");
+  };
   return (
     <>
       <div className="type-list">
@@ -19,6 +21,7 @@ const TypesList = (props) => {
                 id={t.id}
                 type={t.name}
                 pokemonList={t.pokemon}
+                onClick={handleClick}
               />
             );
           })}

@@ -21,7 +21,6 @@ const NavTypes = () => {
   return (
     <>
       <TypesList typeList={typeList} />
-      <Home />
     </>
   );
 };
