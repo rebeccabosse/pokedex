@@ -1,13 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-import axios from "axios";
 import "./types.css";
 
-function ButtonType() {
+function ButtonType({ typeList }) {
+  const filterType = typeList.filter(
+    (type) => type.name !== "unknown" && type.pokemon.length > 0
+  );
+
+  console.log(filterType);
   return (
-    <>
-      <div id="btn-content">bitton</div>
-    </>
+    <div id="btn-nav">
+      {filterType.map((type) => {
+        return <button key={type.id}>{type.name}</button>;
+      })}
+    </div>
   );
 }
 
