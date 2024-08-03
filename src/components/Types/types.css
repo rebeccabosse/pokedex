@@ -1,23 +1,26 @@
+.intro {
+  text-align: left;
+  font-size: 50px;
+  margin-left: 35px;
+}
 .type-list {
-  display: flex;
   overflow-x: scroll;
   background-color: aqua;
-  padding: 20px;
+  padding: 30px 20px;
 }
 
 .btn-type {
-  width: 150px;
-  height: 50px;
+  width: 100px;
+  padding: 10px;
   border: none;
   outline: none;
   cursor: pointer;
-  position: relative;
-  z-index: 0;
   border-radius: 5px;
   margin-left: 20px;
   font-size: 20px;
   font-weight: bold;
   display: inline;
+  text-decoration: none;
 }
 
 .normal {
@@ -97,7 +100,7 @@
 }
 
 .rock {
-  background-color: #a9756fcc;
+  border: 2px solid #a9756fcc;
   background-color: white;
   color: #a9756fcc;
   box-shadow: 10px 9px 0px #a9756fcc;
@@ -112,7 +115,7 @@
   border: none;
 }
 .bug {
-  background-color: #a8b820;
+  border: 2px solid #a8b820;
   background-color: white;
   color: #a8b820;
   box-shadow: 10px 9px 0px #a8b820;
@@ -127,7 +130,7 @@
   border: none;
 }
 .ghost {
-  background-color: #705898;
+  border: 2px solid #705898;
   background-color: white;
   color: #705898;
   box-shadow: 10px 9px 0px #705898;
@@ -142,7 +145,7 @@
   border: none;
 }
 .steel {
-  background-color: #949494cc;
+  border: 2px solid #949494cc;
   background-color: white;
   color: #949494cc;
   box-shadow: 10px 9px 0px #949494cc;
@@ -157,7 +160,7 @@
   border: none;
 }
 .fire {
-  background-color: #f08030;
+  border: 2px solid #f08030;
   background-color: white;
   color: #f08030;
   box-shadow: 10px 9px 0px #f08030;
@@ -172,7 +175,7 @@
   border: none;
 }
 .water {
-  background-color: #6890f0;
+  border: 2px solid #6890f0;
   background-color: white;
   color: #6890f0;
   box-shadow: 10px 9px 0px #6890f0;
@@ -187,12 +190,11 @@
   border: none;
 }
 .grass {
-  background-color: #78c850;
+  border: 2px solid #78c850;
   background-color: white;
   color: #78c850;
   box-shadow: 10px 9px 0px #78c850;
-  -webkit-transition: ease-out 0.4s;
-  -moz-transition: ease-out 0.4s;
+
   transition: ease-out 0.4s;
 }
 .grass:hover {
@@ -202,7 +204,7 @@
   border: none;
 }
 .electric {
-  background-color: #f8d030;
+  border: 2px solid #f8d030;
   background-color: white;
   color: #f8d030;
   box-shadow: 10px 9px 0px #f8d030;
@@ -217,7 +219,7 @@
   border: none;
 }
 .psychic {
-  background-color: #f85888;
+  border: 2px solid #f85888;
   background-color: white;
   color: #f85888;
   box-shadow: 10px 9px 0px #f85888;
@@ -232,7 +234,7 @@
   border: none;
 }
 .ice {
-  background-color: #86d1f3;
+  border: 2px solid #86d1f3;
   background-color: white;
   color: #86d1f3;
   box-shadow: 10px 9px 0px #86d1f3;
@@ -247,7 +249,7 @@
   border: none;
 }
 .dragon {
-  background-color: #7038f8;
+  border: 2px solid #7038f8;
   background-color: white;
   color: #7038f8;
   box-shadow: 10px 9px 0px #7038f8;
@@ -262,7 +264,7 @@
   border: none;
 }
 .dark {
-  background-color: #5a5979;
+  border: 2px solid #5a5979;
   background-color: white;
   color: #5a5979;
   box-shadow: 10px 9px 0px #5a5979;
@@ -277,7 +279,7 @@
   border: none;
 }
 .fairy {
-  background-color: #ee99ac;
+  border: 2px solid #ee99ac;
   background-color: white;
   color: #ee99ac;
   box-shadow: 10px 9px 0px #ee99ac;
@@ -287,21 +289,6 @@
 }
 .fairy:hover {
   background-color: #ee99ac;
-  color: white;
-  box-shadow: 10px 9px 0px black;
-  border: none;
-}
-.stellar {
-  background-color: #40b5a5;
-  background-color: white;
-  color: #40b5a5;
-  box-shadow: 10px 9px 0px #40b5a5;
-  -webkit-transition: ease-out 0.4s;
-  -moz-transition: ease-out 0.4s;
-  transition: ease-out 0.4s;
-}
-.stellar:hover {
-  background-color: #40b5a5;
   color: white;
   box-shadow: 10px 9px 0px black;
   border: none;
