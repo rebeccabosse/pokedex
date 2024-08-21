@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import "../App.css";
-import ButtonType from "./Types/ButtonType";
 import PokemonRandom from "./Pokemons/PokemonRandom";
 const Home = () => {
   const [typeList, setTypeList] = useState([]);
@@ -24,10 +24,22 @@ const Home = () => {
     };
     getTypes();
   }, []);
-
+  const filterType = typeList.filter(
+    (type) => type.name !== "unknown" && type.pokemon.length > 0
+  );
+  console.log(filterType);
   return (
     <>
-      <ButtonType typeList={typeList} />
+      <div>
+        {filterType.map((button, i) => {
+          return (
+            <Link key={i} to={`${button.name}`}>
+              {button.name}
+            </Link>
+          );
+        })}
+      </div>
+
       <PokemonRandom />
     </>
   );

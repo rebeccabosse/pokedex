@@ -34,7 +34,7 @@ const PokemonRandom = () => {
       setPokemons(randomPokemon);
       setFlavorText(randomPokemon.species);
 
-      console.log(flavorText);
+      //console.log(flavorText);
     };
     getPokemons();
   }, []);
