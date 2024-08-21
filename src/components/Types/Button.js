@@ -4,6 +4,7 @@ import "./types.css";
 import { Link } from "react-router-dom";
 
 const Button = ({ name, type, id, pokemon }) => {
+  console.log(type);
   /*const handleCLick = () => {
     pokemon &&
       pokemon.forEach((p) => {
