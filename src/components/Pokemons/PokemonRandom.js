@@ -4,6 +4,7 @@ import CardRandom from "./CardRandom";
 
 const PokemonRandom = () => {
   const [pokemons, setPokemons] = useState([]);
+  const [flavorText, setFlavorText] = useState([]);
 
   useEffect(() => {
     const getPokemons = async () => {
@@ -28,16 +29,19 @@ const PokemonRandom = () => {
           };
         })
       );
-      setPokemons(pokeData);
+      const randomPokemon =
+        pokeData[Math.floor(Math.random() * pokeData.length)];
+      setPokemons(randomPokemon);
+      setFlavorText(randomPokemon.species);
 
-      console.log(pokeData);
+      console.log(flavorText);
     };
-
     getPokemons();
   }, []);
+
   return (
-    <div style={{ backgroundColor: "lightseagreen", marginTop: "30px" }}>
-      <CardRandom pokemons={pokemons} />
+    <div className="cardRandom">
+      <CardRandom pokemons={pokemons} id={pokemons.id} />
     </div>
   );
 };
