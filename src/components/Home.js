@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PokemonRandom from "./PokemonRandom/PokemonRandom";
 import Types from "./Types/Types";
-import "../App.css";
+import "../../src/components/Styles/App.css";
 
 const Home = () => {
   const [typesList, setTypesList] = useState([]);

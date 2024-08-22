@@ -1,6 +1,5 @@
 import React from "react";
-import "./random.css";
-
+import "../../components/Styles/random.css";
 //import { useParams } from "react-router-dom";
 const Card = ({ pokemons, id, bgtype }) => {
   return (
