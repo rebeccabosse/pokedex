@@ -1,5 +1,5 @@
 import React from "react";
-import "./pokemon.css";
+import "./random.css";
 
 //import { useParams } from "react-router-dom";
 const Card = ({ pokemons, id, bgtype }) => {

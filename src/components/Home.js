@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
-import "../App.css";
-import PokemonRandom from "./Pokemons/PokemonRandom";
+import PokemonRandom from "./PokemonRandom/PokemonRandom";
 import Types from "./Types/Types";
+import "../App.css";
+
 const Home = () => {
   const [typesList, setTypesList] = useState([]);
   useEffect(() => {
