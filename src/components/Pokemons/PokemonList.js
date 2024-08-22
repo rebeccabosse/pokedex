@@ -1,7 +1,7 @@
 import React from "react";
 
-const PokemonList = () => {
-  return <div>Pokelist</div>;
+const PokemonList = ({ name }) => {
+  return <div>{name}</div>;
 };
 
 export default PokemonList;
