@@ -1,13 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import "./types.css";
 const Types = (props) => {
-  const { name, id } = props;
-  console.log(id);
+  const { name, type } = props;
+  //console.log(type);
   return (
-    <div>
-      <Link to={`${name}`}>{name}</Link>
-    </div>
+    <>
+      <div>
+        <Link to={`${name}`} className={`btn-type ${type}`}>
+          {name}
+        </Link>
+      </div>
+    </>
   );
 };
 
