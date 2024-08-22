@@ -1,0 +1,16 @@
+.back {
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content {
+  background-color: yellow;
+  color: black;
+  margin-top: 2rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}

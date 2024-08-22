@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
+import Card from "./Card";
+import "../Styles/pokemonList.css";
+import { FaArrowLeft } from "react-icons/fa";
 
 const PokemonList = () => {
   const [type, setType] = useState([]);
@@ -28,14 +31,20 @@ const PokemonList = () => {
     };
 
     fetchPokemon();
-  }, []);
+  }, [name]);
   console.log(type);
   return (
     <>
-      <div>{name}</div>
-      <div>
+      <div className="back">
+        <Link to="/">
+          <FaArrowLeft size={30} color="black" />
+        </Link>
+        <h2>Pokemon {name}</h2>
+      </div>
+
+      <div className="content">
         {type.map((pokemon, i) => {
-          return <p>{pokemon.name}</p>;
+          return <Card name={pokemon.name} />;
         })}
       </div>
     </>
