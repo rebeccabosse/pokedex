@@ -33,14 +33,16 @@ const Home = () => {
   console.log(filterType);
   return (
     <>
-      <div style={{ display: "flex" }}>
+      <h2 className="intro">choose a type</h2>
+      <div className="type-list">
         {filterType.map((type, id) => {
-          return <Types key={id} name={type.name} id={type.id} />;
+          return (
+            <Types key={id} name={type.name} id={type.id} type={type.name} />
+          );
         })}
       </div>
-      {/*
-  <PokemonRandom />
-*/}
+
+      <PokemonRandom />
     </>
   );
 };
