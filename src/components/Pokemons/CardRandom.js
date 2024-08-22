@@ -1,9 +1,10 @@
 import React from "react";
 import "./pokemon.css";
-import { useParams } from "react-router-dom";
-const Card = ({ pokemons, id }) => {
+
+//import { useParams } from "react-router-dom";
+const Card = ({ pokemons, id, bgtype }) => {
   return (
-    <div className="card">
+    <div className={`card ${bgtype}`}>
       <h3>Pokemon random</h3>
       <div className="pokemon-header">
         <h1> {pokemons.name}</h1>
@@ -18,6 +19,7 @@ const Card = ({ pokemons, id }) => {
         <img
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`}
           className="img"
+          alt="pokemon"
         />
       </div>
       <div></div>

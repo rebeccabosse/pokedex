@@ -33,15 +33,18 @@ const PokemonRandom = () => {
         pokeData[Math.floor(Math.random() * pokeData.length)];
       setPokemons(randomPokemon);
       setFlavorText(randomPokemon.species);
-
-      //console.log(flavorText);
     };
     getPokemons();
   }, []);
-
+  console.log(pokemons);
+  console.log(flavorText);
   return (
     <div className="cardRandom">
-      <CardRandom pokemons={pokemons} id={pokemons.id} />
+      <CardRandom
+        pokemons={pokemons}
+        id={pokemons.id}
+        bgtype={pokemons.types && pokemons.types[0].type.name}
+      />
     </div>
   );
 };
