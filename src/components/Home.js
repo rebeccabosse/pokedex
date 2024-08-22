@@ -25,12 +25,12 @@ const Home = () => {
     getTypes();
   }, []);
 
-  console.log(typesList);
+  //console.log(typesList);
 
   const filterType = typesList.filter(
     (type) => type.name !== "unknown" && type.pokemon.length > 0
   );
-  console.log(filterType);
+  //console.log(filterType);
   return (
     <>
       <h2 className="intro">choose a type</h2>

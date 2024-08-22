@@ -36,14 +36,15 @@ const PokemonRandom = () => {
     };
     getPokemons();
   }, []);
-  console.log(pokemons);
-  console.log(flavorText);
+  //console.log(pokemons);
+  //console.log(flavorText);
   return (
     <div className="cardRandom">
       <CardRandom
         pokemons={pokemons}
         id={pokemons.id}
         bgtype={pokemons.types && pokemons.types[0].type.name}
+        description={flavorText}
       />
     </div>
   );
