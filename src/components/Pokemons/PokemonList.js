@@ -6,7 +6,7 @@ import "../Styles/pokemonList.css";
 import { FaArrowLeft } from "react-icons/fa";
 
 const PokemonList = () => {
-  const [type, setType] = useState([]);
+  const [pokemon, setPokemon] = useState([]);
   const { name } = useParams();
   //console.log(name);
 
@@ -21,7 +21,7 @@ const PokemonList = () => {
         pokemonUrl.map(async (url) => {
           const pokemonResponse = await axios.get(url);
 
-          setType((state) => {
+          setPokemon((state) => {
             state = [...state, pokemonResponse.data];
             state.sort((a, b) => (a.id > b.id ? 1 : -1));
             return state;
@@ -32,7 +32,7 @@ const PokemonList = () => {
 
     fetchPokemon();
   }, [name]);
-  console.log(type);
+  console.log(pokemon);
   return (
     <>
       <div className="back">
@@ -43,8 +43,8 @@ const PokemonList = () => {
       </div>
 
       <div className="content">
-        {type.map((pokemon, i) => {
-          return <Card name={pokemon.name} />;
+        {pokemon.map((pokemon, i) => {
+          return <Card pokemons={pokemon} />;
         })}
       </div>
     </>
