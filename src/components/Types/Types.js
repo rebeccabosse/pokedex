@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import "../Styles/types.css";
 
 const Types = (props) => {
-  const { name, type } = props;
+  const { type } = props;
   //console.log(type);
   return (
     <>
       <div>
-        <Link to={`${name}`} className={`btn-type ${type}`}>
-          {name}
+        <Link to={`${type}`} className={`btn-type ${type}`}>
+          {type}
         </Link>
       </div>
     </>
