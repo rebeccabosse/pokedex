@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PokemonRandom from "./PokemonRandom/PokemonRandom";
 import Types from "./Types/Types";
-import "../../src/components/Styles/App.css";
 
 const Home = () => {
   const [typesList, setTypesList] = useState([]);
@@ -33,16 +32,18 @@ const Home = () => {
   //console.log(filterType);
   return (
     <>
-      <h2 className="intro">choose a type</h2>
-      <div className="type-list">
-        {filterType.map((type, id) => {
-          return (
-            <Types key={id} name={type.name} id={type.id} type={type.name} />
-          );
-        })}
-      </div>
+      <div style={{ backgroundColor: "yellow", top: 0 }}>
+        <h2 className="intro">choose a type</h2>
+        <div className="type-list">
+          {filterType.map((type, id) => {
+            return (
+              <Types key={id} name={type.name} id={type.id} type={type.name} />
+            );
+          })}
+        </div>
 
-      <PokemonRandom />
+        <PokemonRandom />
+      </div>
     </>
   );
 };
