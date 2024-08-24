@@ -7,13 +7,13 @@ import { FaArrowLeft } from "react-icons/fa";
 
 const PokemonList = () => {
   const [pokemon, setPokemon] = useState([]);
-  const { name } = useParams();
+  const { type } = useParams();
   //console.log(name);
 
   useEffect(() => {
     const fetchPokemon = async () => {
       const response = await axios.get(
-        `https://pokeapi.co/api/v2/type/${name}`
+        `https://pokeapi.co/api/v2/type/${type}`
       );
       const pokemonUrl = response.data.pokemon.map((u) => u.pokemon.url);
 
@@ -31,7 +31,7 @@ const PokemonList = () => {
     };
 
     fetchPokemon();
-  }, [name]);
+  }, [type]);
   console.log(pokemon);
   return (
     <>
@@ -39,7 +39,7 @@ const PokemonList = () => {
         <Link to="/">
           <FaArrowLeft size={30} color="black" />
         </Link>
-        <h2>Pokemon {name}</h2>
+        <h2>Pokemon {type}</h2>
       </div>
 
       <div className="content">
