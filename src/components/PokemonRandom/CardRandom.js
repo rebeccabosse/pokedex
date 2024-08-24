@@ -1,7 +1,6 @@
 import React from "react";
 import "../../components/Styles/random.css";
 import { COLOR } from "../Types/TypeColors";
-import PokemonT from "../../pokeball-w.svg";
 //import { useParams } from "react-router-dom";
 const Card = ({ pokemons, id, bgtype, description }) => {
   const filterDesc =
