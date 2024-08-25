@@ -8,7 +8,6 @@ const Card = ({ pokemons, id, bgtype, description }) => {
     description.flavor_text_entries.filter(
       (item) => item.language.name === "en"
     )[0].flavor_text;
-  //console.log(filterDesc);
 
   return (
     <div className={`card`} style={{ backgroundColor: COLOR.TYPE(bgtype) }}>

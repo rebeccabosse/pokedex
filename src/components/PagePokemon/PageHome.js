@@ -12,7 +12,7 @@ import { FaArrowLeft } from "react-icons/fa";
 const PageHome = () => {
   const [pokemon, setPokemon] = useState([]);
   const [species, setSpecies] = useState([]);
-  const [isActive, setIsActive] = useState("About");
+  const [isActive, setIsActive] = useState("Stats");
   const { name } = useParams();
 
   useEffect(() => {
@@ -28,6 +28,10 @@ const PageHome = () => {
   }, [name]);
   console.log(pokemon);
   console.log(species);
+
+  const handleClick = () => {
+    console.log("hello about");
+  };
   return (
     <div
       className="bg"

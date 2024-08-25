@@ -1,8 +1,10 @@
 .bg {
+  position: relative;
   background-image: url("../../pokeball-w.svg");
   background-repeat: no-repeat;
   background-size: 16%;
   background-position: top 60% center;
+  height: 100%;
 }
 .nav-back {
   padding: 20px;
@@ -42,14 +44,14 @@
   text-align: center;
   margin-left: 430px;
   z-index: 3;
-  position: relative;
 }
 .detail-content {
-  position: relative;
+  position: absolute;
   background-color: white;
   z-index: 2;
-  top: -70px;
+  top: 400px;
   left: 200px;
   width: 700px;
   border-radius: 10px;
+  height: 300px;
 }
