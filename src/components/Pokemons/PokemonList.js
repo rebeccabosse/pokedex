@@ -34,7 +34,7 @@ const PokemonList = () => {
   }, [type]);
 
   return (
-    <>
+    <div className="home-pokemon">
       <div className="back">
         <Link to="/">
           <FaArrowLeft size={30} color="black" />
@@ -47,7 +47,7 @@ const PokemonList = () => {
           return <Card pokemons={pokemon} key={i} />;
         })}
       </div>
-    </>
+    </div>
   );
 };
 

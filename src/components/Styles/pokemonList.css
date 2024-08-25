@@ -1,3 +1,6 @@
+.home-pokemon {
+  margin: 0 150px;
+}
 .back {
   display: flex;
   justify-content: space-between;
