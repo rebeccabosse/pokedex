@@ -4,11 +4,14 @@
   height: 200px;
   margin: 10px;
   background-image: url("../../pokeball-w.svg");
-  background-position: center;
+  background-position: bottom 20px right 20px;
   background-repeat: no-repeat;
   background-size: 40%;
   padding: 10px 5px;
   border-radius: 20px;
+}
+.card-pokemon:hover {
+  background-color: red;
 }
 .card-header {
   padding: 5px 10px;
@@ -33,8 +36,10 @@
   float: left;
 }
 .poke-types li {
-  background-color: red;
-  margin-left: 10px;
+  background-color: rgba(251, 249, 249, 0.245);
+  margin: 10px;
+  color: white;
+  text-decoration: none;
   border-radius: 5px;
   padding: 5px 12px;
   width: auto;
@@ -43,4 +48,15 @@
 
 .img-pokemon {
   width: 70%;
+}
+.poke-name,
+.poke-id {
+  color: white;
+  text-decoration: none;
+}
+.image-content img {
+  float: right;
+}
+.poke-name:hover {
+  color: black;
 }
