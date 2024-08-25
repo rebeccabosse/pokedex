@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PokemonRandom from "./PokemonRandom/PokemonRandom";
+import "./Styles/App.css";
 import Types from "./Types/Types";
 
 const Home = () => {
@@ -30,7 +31,7 @@ const Home = () => {
 
   return (
     <>
-      <div>
+      <div className="home-content">
         <h2 className="intro">choose a type</h2>
         <div className="type-list">
           {filterType.map((type, id) => {
