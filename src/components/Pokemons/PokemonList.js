@@ -32,7 +32,7 @@ const PokemonList = () => {
 
     fetchPokemon();
   }, [type]);
-  console.log(pokemon);
+
   return (
     <>
       <div className="back">
@@ -44,7 +44,7 @@ const PokemonList = () => {
 
       <div className="content">
         {pokemon.map((pokemon, i) => {
-          return <Card pokemons={pokemon} />;
+          return <Card pokemons={pokemon} key={i} />;
         })}
       </div>
     </>
