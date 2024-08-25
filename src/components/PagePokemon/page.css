@@ -1,0 +1,55 @@
+.bg {
+  background-image: url("../../pokeball-w.svg");
+  background-repeat: no-repeat;
+  background-size: 16%;
+  background-position: top 60% center;
+}
+.nav-back {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.bg-container {
+  padding: 30px 150px;
+}
+.pokeball {
+  width: 40px;
+}
+.poke-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.type-btn {
+  border-radius: 5px;
+  background-color: lightblue;
+  font-weight: bold;
+  border: none;
+  margin-right: 10px;
+}
+.poke-details {
+  text-align: center;
+}
+.img-poke-detail {
+  width: 330px;
+}
+.image-body {
+  width: 300px;
+  text-align: center;
+  margin-left: 430px;
+  z-index: 3;
+  position: relative;
+}
+.detail-content {
+  position: relative;
+  background-color: white;
+  z-index: 2;
+  top: -70px;
+  left: 200px;
+  width: 700px;
+  border-radius: 10px;
+}
