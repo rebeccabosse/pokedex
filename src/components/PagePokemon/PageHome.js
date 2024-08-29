@@ -29,9 +29,6 @@ const PageHome = () => {
   console.log(pokemon);
   console.log(species);
 
-  const handleClick = () => {
-    console.log("hello about");
-  };
   return (
     <div
       className="bg"
@@ -69,13 +66,11 @@ const PageHome = () => {
             })}
         </div>
         <div className="poke-details">
-          <div className="image-body">
-            <img
-              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`}
-              className="img-poke-detail"
-              alt="pokemon"
-            />
-          </div>
+          <img
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`}
+            className="img-poke-detail"
+            alt="pokemon"
+          />
 
           <div className="detail-content">
             <nav>
