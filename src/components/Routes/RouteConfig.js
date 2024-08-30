@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../Home";
 import PokemonList from "../Pokemons/PokemonList";
 import PageHome from "../PagePokemon/PageHome";
+
 function RouteConfig() {
   return (
     <>
